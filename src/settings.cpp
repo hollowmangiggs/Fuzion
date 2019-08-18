@@ -632,6 +632,8 @@ void Settings::LoadDefaultsOrSave(std::string path)
  	settings[XORSTR("AutoKnife")][XORSTR("Filters")][XORSTR("allies")] = Settings::AutoKnife::Filters::allies;
  	settings[XORSTR("AutoKnife")][XORSTR("onKey")] = Settings::AutoKnife::onKey;
 
+	settings[XORSTR("QuickSwitch")][XORSTR("enabled")] = Settings::QuickSwitch::enabled;
+
 	std::ofstream(path) << styledWriter.write(settings);
 }
 
@@ -1208,6 +1210,8 @@ void Settings::LoadConfig(std::string path)
  	GetVal(settings[XORSTR("AutoKnife")][XORSTR("Filters")][XORSTR("enemies")], &Settings::AutoKnife::Filters::enemies);
  	GetVal(settings[XORSTR("AutoKnife")][XORSTR("Filters")][XORSTR("allies")], &Settings::AutoKnife::Filters::allies);
  	GetVal(settings[XORSTR("AutoKnife")][XORSTR("onKey")], &Settings::AutoKnife::onKey);
+
+	GetVal(settings[XORSTR("QuickSwitch")][XORSTR("enabled")], &Settings::QuickSwitch::enabled);
 }
 
 void Settings::SaveGrenadeInfo(std::string path)

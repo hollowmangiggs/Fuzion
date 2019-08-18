@@ -1143,6 +1143,7 @@ namespace Settings
 		extern int frequency;
 
 	}
+
 	namespace AutoKnife
  	{
  		extern bool enabled;
@@ -1154,10 +1155,17 @@ namespace Settings
  			extern bool allies;
  		}
  	}
+
+	namespace QuickSwitch
+	{
+		extern bool enabled;
+	}
+
 	namespace AngleIndicator
 	{
 		extern bool enabled;
 	}
+
     namespace Debug
     {
         namespace AutoWall
