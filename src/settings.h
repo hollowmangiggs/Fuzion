@@ -1161,6 +1161,11 @@ namespace Settings
 		extern bool enabled;
 	}
 
+	namespace LeftKnife
+	{
+		extern bool enabled;
+	}
+
 	namespace AngleIndicator
 	{
 		extern bool enabled;

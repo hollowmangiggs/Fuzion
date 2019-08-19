@@ -634,6 +634,8 @@ void Settings::LoadDefaultsOrSave(std::string path)
 
 	settings[XORSTR("QuickSwitch")][XORSTR("enabled")] = Settings::QuickSwitch::enabled;
 
+	settings[XORSTR("LeftKnife")][XORSTR("enabled")] = Settings::LeftKnife::enabled;
+
 	std::ofstream(path) << styledWriter.write(settings);
 }
 
@@ -1212,6 +1214,8 @@ void Settings::LoadConfig(std::string path)
  	GetVal(settings[XORSTR("AutoKnife")][XORSTR("onKey")], &Settings::AutoKnife::onKey);
 
 	GetVal(settings[XORSTR("QuickSwitch")][XORSTR("enabled")], &Settings::QuickSwitch::enabled);
+
+	GetVal(settings[XORSTR("LeftKnife")][XORSTR("enabled")], &Settings::LeftKnife::enabled);
 }
 
 void Settings::SaveGrenadeInfo(std::string path)
