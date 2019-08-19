@@ -225,8 +225,9 @@ void Misc::RenderTab()
 			ImGui::Separator();
 			ImGui::Columns(2, nullptr, true);
 			{
-				ImGui::Checkbox(XORSTR("Enabled"), &Settings::ThirdPerson::enabled);
+				ImGui::Checkbox(XORSTR("Key Enabled"), &Settings::ThirdPerson::enabled);
 			    ImGui::Text(XORSTR("Showed Angle"));
+				ImGui::Text(XORSTR("Toggle Key"));
 			}
 			ImGui::NextColumn();
 			{
@@ -234,6 +235,7 @@ void Misc::RenderTab()
 				ImGui::SliderFloat(XORSTR("##TPCAMOFFSET"), &Settings::ThirdPerson::distance, 0.f, 500.f, XORSTR("Camera Offset: %0.f"));
                 ImGui::Combo(XORSTR("Showed Angle"), (int*)& Settings::ThirdPerson::type, angleTypes, IM_ARRAYSIZE(angleTypes));
 				ImGui::PopItemWidth();
+				UI::KeyBindButton(&Settings::ThirdPerson::key);
 			}
 			ImGui::Columns(1);
 			ImGui::Separator();
