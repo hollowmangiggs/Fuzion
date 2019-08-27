@@ -369,7 +369,7 @@ void Misc::RenderTab()
 				ImGui::PushItemWidth(-1);
 				if (ImGui::Combo(XORSTR("##ANIMATIONTYPE"), (int*)& Settings::ClanTagChanger::type, animationTypes, IM_ARRAYSIZE(animationTypes)))
 					ClanTagChanger::UpdateClanTagCallback();
-				if (ImGui::SliderInt(XORSTR("##ANIMATIONSPEED"), &Settings::ClanTagChanger::animationSpeed, 500, 2000))
+				if (ImGui::SliderInt(XORSTR("##ANIMATIONSPEED"), &Settings::ClanTagChanger::animationSpeed, 0, 2000))
 					ClanTagChanger::UpdateClanTagCallback();
 				ImGui::PopItemWidth();
 			}
@@ -385,7 +385,7 @@ void Misc::RenderTab()
 				NameChanger::SetName(std::string(nickname).c_str());
 
 			if (ImGui::Button(XORSTR("Glitch Name")))
-				NameChanger::SetName("\n\xAD\xAD\xAD");
+				NameChanger::SetName(XORSTR("\n\xAD\xAD\xAD"));
 			ImGui::SameLine();
 			if (ImGui::Button(XORSTR("No Name")))
 			{
