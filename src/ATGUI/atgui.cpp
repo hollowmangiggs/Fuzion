@@ -105,7 +105,7 @@ void UI::SwapWindow()
 	if (engine->IsInGame())
 		return;
 
-    Draw::ImText( ImVec2( 4.f, 4.f ), Settings::UI::watermarkColor.Color(), XORSTR( "Fuzion" ), nullptr, 0.0f, nullptr,
+    Draw::ImText( ImVec2( 4.f, 4.f ), Settings::UI::watermarkColor.Color(), XORSTR( "TuxGods BETA" ), nullptr, 0.0f, nullptr,
                   ImFontFlags_Shadow );
 }
 
